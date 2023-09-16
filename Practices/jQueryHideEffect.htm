@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQueryHideEffect</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <h1>jQueryHideEffect</h1>
+    <h2>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab reiciendis,
+      eius consequuntur expedita impedit consequatur cumque error, omnis eaque
+      illo qui iste veniam nostrum inventore vitae minima ipsa quis minus.
+    </h2>
+    <div class="button">
+      <button id="hide" type="button">Hide</button>
+      <button id="show" type="button">Show</button>
+      <button id="toggle" type="button">Toggel</button>
+    </div>
+    <script>
+        $(function(){
+            $("*").css({padding: '0', margin: '0', boxSizing: 'borderBox', textAlign: 'center'});
+            $("h1").css({color: 'black', backgroundColor: 'khaki', width: '80%', margin: '0 auto', padding: '10px', marginTop: '20px'});
+            $("h2").css({color: 'red', backgroundColor: 'blue', width: '80%', margin: '0 auto', padding: '10px', marginTop: '20px'});
+            $(".button").css({display: 'flex',gap: '20px', width: '80%', justifyContent: 'center', padding: '10px', marginTop: '20px' });
+            $("button").css({padding: '10px', fontSize: '16px',color: 'white', backgroundColor: 'darkgreen'});
+        })
+        // $(selector).hide(speed, easing, callback);
+        // speed => slow , fast , 2000(milliseconds) 
+        // easing => linear , swing , default (It specifies the easing function to be used for transition.)
+        // callback => This function will be executed after the effect is complete
+        $(function(){
+            $("#hide").click(function() {
+                $("h2").hide('fast', 'linear',);
+            });
+        });
+        // $(selector).show(speed, easing, callback);  
+        $(function(){
+            $("#show").click(function() {
+                $("h2").show('slow', 'swing', function(){
+                    alert("show is complate!");
+                });
+            });
+        })
+        // $(selector).toggle(speed, easing, callback);  
+        // $(selector).toggle(display);This parameter is used to specify the visibility state. It can be one of the following values:
+            // "show": This makes the element visible.
+            // "hide": This hides the element.
+            // "toggle": This toggles the visibility of the element. If it's currently visible, it will be hidden; if it's currently hidden, it will be shown.
+        $(function(){
+            $("#toggle").click(function() {
+                $("h2").toggle(2000);
+            });
+        })
+    </script>
+  </body>
+</html>

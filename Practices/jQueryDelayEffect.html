@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Delay</title>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</head>
+<body>
+    <h1>jQueryDelayEffect</h1>
+    <div class="box">Hello World!</div>
+    <button class="delay">Delay</button>
+    <script>
+        $(function(){
+            $("*").css({margin: '0', padding: '0', boxSizing: 'borderBox'});
+           $("h1").css({backgroundColor: 'black', color: 'white', width: '80%', margin: '0 auto', padding: '15px'});
+           $(".box").css({backgroundColor: 'crimson', color: 'white', width: '150px', height: '150px', padding: '15px', marginTop: '20px'});
+           $(".delay").css({backgroundColor: 'darkgreen', color: 'white', padding: '10px', marginTop: '20px', marginLeft: '120px'}); 
+        });
+        // $(selector).delay (speed, queueName)
+        // queueName: It is also an optional parameter. It specifies the name of
+        // the queue. Its default value is "fx" the standard queue effect.
+        $('.delay').click(function(){
+            $('.box').delay(2000).animate({marginLeft: '800px'}, 1000);
+        })
+        $('.box').hover(function(){
+            $('.box').css({backgroundColor: 'blue'}).animate({marginLeft: '100px'}, 2000)
+        })
+    </script>
+</body>
+</html>

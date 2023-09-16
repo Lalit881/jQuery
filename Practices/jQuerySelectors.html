@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuerySelectors</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <h1>jQuerySelectors</h1>
+    <h3 class="h3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus?</h3>
+    <p id="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque vel blanditiis iure a inventore accusantium quo excepturi doloremque debitis illo eius molestiae dolor, culpa tenetur corrupti maiores unde saepe quod!</p>
+    <script>
+        $(function(){
+            // Universal Selector
+            $("*").css({width: '80%', height: '100px', textAlign: 'center', margin: '0 auto', paddingTop: '20px'})
+            // Tag Name Selector
+            $("h1").css({ color: 'blue', backgroundColor: 'teal', marginTop: '40px'})
+            // Class Selector
+            $(".h3").css({color: 'red', backgroundColor: 'purple', marginTop: '40px'})
+            // Id Selector
+            $("#p").css({color: 'black' , marginTop: '40px'})
+        })
+    </script>
+</body>
+</html>
